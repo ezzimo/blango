@@ -74,6 +74,13 @@ class Dev(Configuration):
 
     ROOT_URLCONF = 'blango.urls'
 
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+    ACCOUNT_ACTIVATION_DAYS = 7
+
+    # controling the registration (set to False to close registration)
+    REGISTRATION_OPEN = True
+
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
