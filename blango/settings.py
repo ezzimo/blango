@@ -69,6 +69,7 @@ class Dev(Configuration):
         'rest_framework.authtoken',
         'drf_yasg',
         'django_filters',
+        'versatileimagefield',
     ]
 
     MIDDLEWARE = [
@@ -102,6 +103,10 @@ class Dev(Configuration):
 
     # controling the registration (set to False to close registration)
     REGISTRATION_OPEN = True
+    
+    MEDIA_ROOT = BASE_DIR / "media"
+
+    MEDIA_URL = "/media/"
 
     TEMPLATES = [
         {
